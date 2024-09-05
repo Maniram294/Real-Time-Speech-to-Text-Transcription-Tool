@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #7d91c7c7; /* Light blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 400px; /* Adjust the width as needed */
+    border-radius: 30px;
+    background: #ffffff; /* Light gray */
+    -webkit-box-shadow: 12px 12px 24px rgba(25, 149, 173, 0.4), -12px -12px 24px rgba(161, 214, 226, 0.4); /* Teal blue and light blue shadows */
+    box-shadow: 12px 12px 24px rgba(25, 149, 173, 0.4), -12px -12px 24px rgba(161, 214, 226, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center; /* Center text inside the main element */
+    position: relative; /* Ensures absolute positioned children are relative to this container */
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    position: absolute; /* Position the heading at the top */
+    top: 20px; /* Adjust distance from the top as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-area-container {
+    position: relative;
+    width: 100%; /* Full width of the main container */
+}
+
+.text {
+    background-color: #ffffff; /* Light gray */
+    height: 300px; /* Set a fixed height */
+    width: 100%; /* Full width of the container */
+    min-height: 100px; /* Minimum height to ensure a standard size */
+    resize: none;
+    border: none;
+    outline: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    overflow-y: auto; /* Add only vertical scroll if content exceeds */
+}
+
+/* Customize the scrollbar */
+.text::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+}
+
+.text::-webkit-scrollbar-thumb {
+    background-color: #1995AD; /* Teal blue color for the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+}
+
+.text::-webkit-scrollbar-track {
+    background: #A1D6E2; /* Light blue background of the scrollbar track */
+}
+
+/* Hide scrollbar arrows for WebKit browsers */
+.text::-webkit-scrollbar-button {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.btn {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Record button styling */
+.mic-btn {
+    background-color: #008000; /* Light green */
+    color: white;
+   /* -webkit-box-shadow: 8px 8px 18px rgba(25, 149, 173, 0.4), -8px -8px 18px rgba(161, 214, 226, 0.4); /* Shadows */
+   /* box-shadow: 8px 8px 18px rgba(25, 149, 173, 0.4), -8px -8px 18px rgba(161, 214, 226, 0.4); */
+}
+
+.mic-btn.active {
+    background-color: #ff0000; /* Bright red when recording */
+}
+
+.mic-btn:hover {
+    background-color: #76c76d; /* Slightly brighter green on hover */
+}
+
+/* Stop button styling */
+.stop-btn {
+    background-color: #ff0000; /* Bright red */
+    color: white;
+ /*   -webkit-box-shadow: 8px 8px 18px rgba(161, 214, 226, 0.4), -8px -8px 18px rgba(25, 149, 173, 0.4); /* Shadows */
+   /* box-shadow: 8px 8px 18px rgba(161, 214, 226, 0.4), -8px -8px 18px rgba(25, 149, 173, 0.4);*/
+}
+
+.stop-btn:hover {
+    background-color: #ff6666; /* Light red on hover */
+}
+
+/* Clear button styles (unchanged) */
+.clear-btn {
+    background: #1995AD; /* Teal blue for the clear button */
+    color: #F1F1F2; /* Light gray text color */
+  /*  -webkit-box-shadow: 8px 8px 18px #87def066, -8px -8px 18px #87def066; /* Shadows */
+  /*  box-shadow: 8px 8px 18px #87def066, -8px -8px 18px #87def066; */
+}
+
+.clear-btn i {
+    font-size: 20px; /* Adjust icon size if needed */
+}
+
+/* Ensure hover effect */
+.clear-btn:hover {
+    background: #1995AD; /* Teal blue for the clear button on hover */
+   /* -webkit-box-shadow: 8px 8px 18px #87def066, -8px -8px 18px #87def066; /* Shadows */
+   /* box-shadow: 8px 8px 18px #87def066, -8px -8px 18px #87def066; */
+}
